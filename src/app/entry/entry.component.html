@@ -1,0 +1,42 @@
+<div class="container">
+    <h2 class="title">Password manager</h2>
+    <div class="tbl-header">
+        <table cellpadding="0" cellspacing="0" border="0">
+            <thead>
+                <tr>
+                    <th>Site name</th>
+                    <th>Site url</th>
+                    <th>Account login</th>
+                    <th>Account password</th>
+                    <th class="small-td"></th>
+                    <th class="small-td"></th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+    <div class="tbl-content">
+        <table cellpadding="0" cellspacing="0" border="0">
+            <tbody>
+                <tr *ngFor="let entry of entries">
+                    <td>{{ entry.site_name }}</td>
+                    <td>
+                        <a href="#" (click)="openLink(entry.site_url)">{{ entry.site_url }}</a>
+                    </td>
+                    <td>{{ entry.login }}</td>
+                    <td>{{ entry.password }}</td>
+                    <td class="small-td">
+                        <button type="button" class="btn custom-icon btn-sm" title="Edit entry">
+                            <i class="fa fa-edit"></i>
+                        </button>
+                    </td>
+                    <td class="small-td">
+                        <button type="button" class="btn custom-icon btn-sm" title="Delete entry">
+                            <i class="fa fa-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

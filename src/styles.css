@@ -1,0 +1,40 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: Open Sans;
+}
+
+.container {
+    padding: 0;
+    margin-top: 120px;
+    margin-right: auto;
+    margin-left: auto;
+    background: white;
+    width: 63%;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.custom-icon {
+    background: rgba(255,255,255,0);
+    color: #4d4d4d;
+    float: right;
+}
+
+.custom-icon:hover {
+    cursor: pointer;
+    color: black
+}
+
+.btn {
+    border: none;
+}
+
+.small-td {
+    text-align: left;
+    width: 46px;
+    padding-left: 5px;
+}

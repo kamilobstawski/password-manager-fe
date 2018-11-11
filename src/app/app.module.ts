@@ -5,13 +5,16 @@ import { FormsModule } from '@angular/forms';
 
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
-
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { EntryComponent } from './entry/entry.component';
+import { EntryService } from './_services/entry.service';
+
 
 @NgModule({
     declarations: [
         AppComponent,
+        EntryComponent,
     ],
     imports: [
         BrowserModule,
@@ -21,6 +24,7 @@ import { AppRoutingModule } from './/app-routing.module';
         HttpClientModule,
     ],
     providers: [
+        EntryService
     ],
     bootstrap: [AppComponent]
 })
