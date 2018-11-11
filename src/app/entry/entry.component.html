@@ -10,11 +10,11 @@
                     <th>Account password</th>
                     <th class="small-td"></th>
                     <th class="small-td"></th>
+                    <th class="small-td"></th>
                 </tr>
             </thead>
         </table>
     </div>
-
     <div class="tbl-content">
         <table cellpadding="0" cellspacing="0" border="0">
             <tbody>
@@ -25,6 +25,11 @@
                     </td>
                     <td>{{ entry.login }}</td>
                     <td>{{ entry.password }}</td>
+                    <td class="small-td">
+                        <button type="button" class="btn custom-icon btn-sm" title="Generate link for that entry" (click)="generateEntry(entry.pk)">
+                            <i class="fa fa-file"></i>
+                        </button>
+                    </td>
                     <td class="small-td">
                         <button type="button" class="btn custom-icon btn-sm" title="Edit entry" (click)="updateEntry(entry.pk)">
                             <i class="fa fa-edit"></i>

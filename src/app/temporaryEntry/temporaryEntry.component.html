@@ -1,0 +1,22 @@
+<div class="container">
+    <table cellpadding="0" cellspacing="0" border="0">
+        <thead>
+            <tr>
+                <th>Site name</th>
+                <th>Site url</th>
+                <th>Account login</th>
+                <th>Account password</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ entry?.site_name }}</td>
+                <td>
+                    <a href="#" (click)="openLink(entry.site_url)">{{ entry?.site_url }}</a>
+                </td>
+                <td>{{ entry?.login }}</td>
+                <td>{{ entry?.password }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

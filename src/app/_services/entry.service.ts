@@ -31,7 +31,7 @@ export class EntryService {
     }
 
     temporaryEntry(token) {
-        return this.http.get(environment.origin + '/delete-entry/' + token + '/')
+        return this.http.get(environment.origin + '/temporary-entry/' + token + '/')
     }
 
     generateLink(entryId: number) {

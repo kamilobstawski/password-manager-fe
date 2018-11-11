@@ -10,6 +10,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { EntryComponent } from './entry/entry.component';
 import { CreateEntryComponent } from './createEntry/createEntry.component';
 import { UpdateEntryComponent } from './updateEntry/updateEntry.component';
+import { TemporaryEntryComponent } from './temporaryEntry/temporaryEntry.component';
 import { EntryService } from './_services/entry.service';
 
 
@@ -19,6 +20,7 @@ import { EntryService } from './_services/entry.service';
         EntryComponent,
         CreateEntryComponent,
         UpdateEntryComponent,
+        TemporaryEntryComponent,
     ],
     imports: [
         BrowserModule,

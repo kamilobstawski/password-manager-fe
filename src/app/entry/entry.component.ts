@@ -51,4 +51,17 @@ export class EntryComponent  implements OnInit {
     updateEntry(entryId) {
         this.router.navigate(['/update-entry', entryId]);
     }
+
+    generateEntry(entryId: number) {
+        this.entryService.generateLink(entryId)
+            .subscribe(
+                data => {
+                    window.alert(data['link'])
+                },
+                error => {
+                    console.log(error);
+                }
+            );
+    }
+
 }
