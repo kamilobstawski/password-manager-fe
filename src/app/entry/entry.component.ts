@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { EntryService } from '../_services/index';
+import { EntryService, CredentialService } from '../_services/index';
+import { User } from '../_models/index';
 
 
 @Component({
@@ -13,6 +14,7 @@ export class EntryComponent  implements OnInit {
 
     constructor(
         private entryService: EntryService,
+        private credentialService: CredentialService,
         private router: Router,
     ) { }
 
@@ -62,6 +64,27 @@ export class EntryComponent  implements OnInit {
                     console.log(error);
                 }
             );
+    }
+
+    login() {
+        let user = new User();
+        user.username = 'admin';
+        user.password = 'test12345';
+        this.credentialService.login(user)
+            .subscribe(
+                data => {
+                    localStorage.setItem('token', data['token']);
+                    location.reload();
+                },
+                error => {
+                    console.log(error);
+                }
+            )
+    }
+
+    logout() {
+        localStorage.removeItem('token');
+        location.reload();
     }
 
 }

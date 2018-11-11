@@ -12,6 +12,7 @@ import { CreateEntryComponent } from './createEntry/createEntry.component';
 import { UpdateEntryComponent } from './updateEntry/updateEntry.component';
 import { TemporaryEntryComponent } from './temporaryEntry/temporaryEntry.component';
 import { EntryService } from './_services/entry.service';
+import { CredentialService } from './_services/credential.service';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { EntryService } from './_services/entry.service';
         HttpClientModule,
     ],
     providers: [
-        EntryService
+        EntryService,
+        CredentialService,
     ],
     bootstrap: [AppComponent]
 })
