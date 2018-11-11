@@ -8,6 +8,7 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { EntryComponent } from './entry/entry.component';
+import { CreateEntryComponent } from './createEntry/createEntry.component';
 import { EntryService } from './_services/entry.service';
 
 
@@ -15,6 +16,7 @@ import { EntryService } from './_services/entry.service';
     declarations: [
         AppComponent,
         EntryComponent,
+        CreateEntryComponent,
     ],
     imports: [
         BrowserModule,

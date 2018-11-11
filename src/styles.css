@@ -38,3 +38,33 @@ html, body {
     width: 46px;
     padding-left: 5px;
 }
+
+.btn-success {
+    border: None;
+    border-radius: 2px;
+    padding: 11px;
+    color: white;
+    background: #1aa3ff;
+    position: relative !important;
+}
+
+.btn-success:hover {
+    cursor: pointer;
+    bottom: 1px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.10), 0 10px 10px rgba(0,0,0,0.08);
+}
+
+.btn-danger {
+    border: None;
+    border-radius: 2px;
+    padding: 11px;
+    color: white;
+    background: #ff4d4d;
+}
+
+.btn-danger:hover {
+    cursor: pointer;
+    bottom: 1px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.10), 0 10px 10px rgba(0,0,0,0.08);
+    background: #ff4d4d;
+}

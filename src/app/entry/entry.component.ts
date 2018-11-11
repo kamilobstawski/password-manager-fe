@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { EntryService } from '../_services/index';
-import { Entry } from '../_models/index';
 
 
 @Component({
@@ -13,6 +13,7 @@ export class EntryComponent  implements OnInit {
 
     constructor(
         private entryService: EntryService,
+        private router: Router,
     ) { }
 
     listEntries() {
@@ -40,6 +41,10 @@ export class EntryComponent  implements OnInit {
                 error => {
                     console.log(error);
                 }
-);
+            );
+    }
+
+    addEntry() {
+        this.router.navigate(['/create-entry']);
     }
 }
