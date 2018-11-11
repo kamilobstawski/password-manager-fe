@@ -26,7 +26,7 @@
                     <td>{{ entry.login }}</td>
                     <td>{{ entry.password }}</td>
                     <td class="small-td">
-                        <button type="button" class="btn custom-icon btn-sm" title="Edit entry">
+                        <button type="button" class="btn custom-icon btn-sm" title="Edit entry" (click)="updateEntry(entry.pk)">
                             <i class="fa fa-edit"></i>
                         </button>
                     </td>

@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { EntryComponent } from './entry/entry.component';
 import { CreateEntryComponent } from './createEntry/createEntry.component';
+import { UpdateEntryComponent } from './updateEntry/updateEntry.component';
 import { EntryService } from './_services/entry.service';
 
 
@@ -17,6 +18,7 @@ import { EntryService } from './_services/entry.service';
         AppComponent,
         EntryComponent,
         CreateEntryComponent,
+        UpdateEntryComponent,
     ],
     imports: [
         BrowserModule,

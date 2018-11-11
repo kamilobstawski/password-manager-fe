@@ -47,4 +47,8 @@ export class EntryComponent  implements OnInit {
     addEntry() {
         this.router.navigate(['/create-entry']);
     }
+
+    updateEntry(entryId) {
+        this.router.navigate(['/update-entry', entryId]);
+    }
 }

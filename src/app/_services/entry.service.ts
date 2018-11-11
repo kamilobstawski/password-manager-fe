@@ -22,8 +22,8 @@ export class EntryService {
         return this.http.post(environment.origin + '/create-entry/', data)
     }
 
-    updateEntry(data) {
-        return this.http.put(environment.origin + '/update-entry/', data)
+    updateEntry(entry) {
+        return this.http.put(environment.origin + '/update-entry/' + entry.pk + '/', entry)
     }
 
     deleteEntry(entryId: number) {
