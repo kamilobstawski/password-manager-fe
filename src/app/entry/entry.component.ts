@@ -15,14 +15,31 @@ export class EntryComponent  implements OnInit {
         private entryService: EntryService,
     ) { }
 
-    ngOnInit() {
+    listEntries() {
         this.entryService.listEntries()
             .subscribe(entries => {
                 this.entries = entries;
+                console.log(entries)
             });
+    }
+
+    ngOnInit() {
+        this.listEntries();
     }
 
     openLink(link) {
         window.open(link);
+    }
+
+    deleteEntry(entryId: number) {
+        this.entryService.deleteEntry(entryId)
+            .subscribe(
+                data => {
+                    this.listEntries();
+                },
+                error => {
+                    console.log(error);
+                }
+);
     }
 }

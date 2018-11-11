@@ -14,8 +14,8 @@ export class EntryService {
         return this.http.get(environment.origin + '/entries/')
     }
 
-    getEntry(entry_id) {
-        return this.http.get(environment.origin + '/get-entry/' + entry_id + '/')
+    getEntry(entryId: number) {
+        return this.http.get(environment.origin + '/get-entry/' + entryId + '/')
     }
 
     createEntry(data) {
@@ -26,15 +26,15 @@ export class EntryService {
         return this.http.put(environment.origin + '/update-entry/', data)
     }
 
-    deleteEntry(data) {
-        return this.http.delete(environment.origin + '/delete-entry/')
+    deleteEntry(entryId: number) {
+        return this.http.delete(environment.origin + '/delete-entry/' + entryId + '/')
     }
 
     temporaryEntry(token) {
         return this.http.get(environment.origin + '/delete-entry/' + token + '/')
     }
 
-    generateLink(entry_id) {
-        return this.http.get(environment.origin + '/generate-link/' + entry_id + '/')
+    generateLink(entryId: number) {
+        return this.http.get(environment.origin + '/generate-link/' + entryId + '/')
     }
 }
