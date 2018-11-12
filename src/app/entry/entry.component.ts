@@ -11,18 +11,22 @@ import { User } from '../_models/index';
 })
 export class EntryComponent  implements OnInit {
     entries: any;
+    logged_in = false;
 
     constructor(
         private entryService: EntryService,
         private credentialService: CredentialService,
         private router: Router,
-    ) { }
+    ) {
+        if (localStorage.getItem('token')) {
+            this.logged_in = true;
+        }
+    }
 
     listEntries() {
         this.entryService.listEntries()
             .subscribe(entries => {
                 this.entries = entries;
-                console.log(entries)
             });
     }
 
@@ -64,6 +68,10 @@ export class EntryComponent  implements OnInit {
                     console.log(error);
                 }
             );
+    }
+
+    showPassword(password) {
+        window.alert(password);
     }
 
     login() {

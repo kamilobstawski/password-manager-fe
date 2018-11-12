@@ -18,7 +18,7 @@
                     <th>Site name</th>
                     <th>Site url</th>
                     <th>Account login</th>
-                    <th>Account password</th>
+                    <th>Password</th>
                     <th class="small-td"></th>
                     <th class="small-td"></th>
                     <th class="small-td"></th>
@@ -35,7 +35,9 @@
                         <a href="#" (click)="openLink(entry.site_url)">{{ entry.site_url }}</a>
                     </td>
                     <td>{{ entry.login }}</td>
-                    <td>{{ entry.password }}</td>
+                    <td>
+                        <a href="#" (click)="showPassword(entry.password)" title="click to expand it">...</a>
+                    </td>
                     <td class="small-td">
                         <button type="button" class="btn custom-icon btn-sm" title="Generate link for that entry" (click)="generateEntry(entry.pk)">
                             <i class="fa fa-file"></i>
@@ -55,7 +57,7 @@
             </tbody>
         </table>
     </div>
-    <button type="button" class="btn btn-success margin-top" title="Add new entry" (click)="addEntry()">
+    <button type="button" class="btn btn-success margin-top" title="Add new entry" (click)="addEntry()" *ngIf="logged_in">
         Add <i class="fa fa-plus"></i>
     </button>
 </div>

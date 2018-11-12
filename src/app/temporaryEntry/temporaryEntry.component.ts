@@ -32,20 +32,8 @@ export class TemporaryEntryComponent  implements OnInit {
             );
     }
 
-    // updateEntry(entry) {
-    //     this.entryService.updateEntry(entry)
-    //         .subscribe(
-    //             data => {
-    //                 this.router.navigate(['/']);
-    //             },
-    //             error => {
-    //                 console.log(error);
-    //             }
-    //         );
-    // }
-    //
-    // goBack() {
-    //     this.router.navigate(['/']);
-    // }
+    showPassword(password) {
+        window.alert(password);
+    }
 
 }

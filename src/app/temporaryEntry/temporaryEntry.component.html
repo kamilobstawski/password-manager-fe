@@ -5,7 +5,7 @@
                 <th>Site name</th>
                 <th>Site url</th>
                 <th>Account login</th>
-                <th>Account password</th>
+                <th>Password</th>
             </tr>
         </thead>
         <tbody>
@@ -15,7 +15,9 @@
                     <a href="#" (click)="openLink(entry.site_url)">{{ entry?.site_url }}</a>
                 </td>
                 <td>{{ entry?.login }}</td>
-                <td>{{ entry?.password }}</td>
+                <td>
+                    <a href="#" (click)="showPassword(entry.password)" title="click to expand it">...</a>
+                </td>
             </tr>
         </tbody>
     </table>
