@@ -36,4 +36,7 @@ export class TemporaryEntryComponent  implements OnInit {
         window.alert(password);
     }
 
+    openLink(link) {
+        window.open(link);
+    }
 }
